@@ -86,7 +86,7 @@ const OrderItemCard = ({order}: Props) => {
                         disabled={isLoading}
                         onValueChange={(value: OrderStatus)=> handleStatusChange(value)}>
                             <SelectTrigger id="status">
-                                <SelectValue placeHolder="Status"></SelectValue>
+                                <SelectValue placeHolder="Status"/>
                             </SelectTrigger>
                             <SelectContent position="popper">
                                 {ORDER_STATUS.map((status)=>(

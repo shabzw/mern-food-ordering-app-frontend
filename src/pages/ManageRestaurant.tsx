@@ -5,7 +5,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import OrderItemCard from "../components/OrderItemCard";
 
 export default function ManageRestaurant() {
-  const {orders, isLoading} = useGetMyRestaurantOrders();
+  const {orders, isLoading: isOrderLoading} = useGetMyRestaurantOrders();
   const {createRestaurant, isLoading: isCreateLoading} = useCreateMyRestaurant();
   const { restaurant } = useGetMyRestaurant();
   const {updateRestaurant, isLoading: isUpdateLoading} = useUpdateMyRestaurant();
@@ -27,7 +27,7 @@ export default function ManageRestaurant() {
       {orders?.map((order)=><OrderItemCard order={order}/>)}
     </TabsContent>
     <TabsContent value="manage-restaurant">
-    <ManageRestaurantForm restaurant={restaurant} onSave={isEditing?updateRestaurant:createRestaurant} isLoading={isCreateLoading||isUpdateLoading}/>
+    <ManageRestaurantForm restaurant={restaurant} onSave={isEditing?updateRestaurant:createRestaurant} isLoading={isCreateLoading||isUpdateLoading||isOrderLoading}/>
     </TabsContent>
   </Tabs>
   )
