@@ -31,8 +31,8 @@ export const useGetMyUser = () => {
 };
 
 type CreateUserRequest = {
-    auth0Id: String;
-    email: String;
+    auth0Id: string;
+    email: string;
 };
 
 
@@ -45,7 +45,7 @@ const {getAccessTokenSilently} = useAuth0()
             method: "POST",
             headers: {
                 Authorization: `Bearer ${accessToken}`,
-                "Content-Type": "application/JSON",
+                "Content-Type": "application/json",
             },
             body: JSON.stringify(user),
         })
