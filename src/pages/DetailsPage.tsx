@@ -91,7 +91,7 @@ export default function DetailsPage() {
   return (
     <div className="flex flex-col gap-10">
       <AspectRatio ratio={16 / 5}>
-        <img src={restaurant.lastUpdated} className="rounded-md object-cover h-full w-full"/>
+        <img src={restaurant.imageURL?restaurant.imageURL:restaurant.imageUrl} className="rounded-md object-cover h-full w-full"/>
       </AspectRatio>
       <div className="grid md:grid-cols-[4fr_2fr] gap-5 md:px-32">
         <div className="flex flex-col gap-4">

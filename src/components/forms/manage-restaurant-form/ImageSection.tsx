@@ -22,7 +22,7 @@ export default function ImagesSection() {
         )}
         <FormField control={control} name="imageFile" render={({field})=>(<FormItem>
             <FormControl>
-                <Input className="bg-white" type="file" accept=".jpg, .jpeg, .png"
+                <Input className="bg-white object-cover" type="file" accept=".jpg, .jpeg, .png"
                 onChange={(event)=> field.onChange(event.target.files ? event.target.files[0]: null)}
                 />
             </FormControl>
