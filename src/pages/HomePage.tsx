@@ -17,7 +17,7 @@ export default function HomePage() {
         <h1 className="text-5xl font-bold tracking-tight text-orange-600">
             Tuck into a takeaway today
         </h1>
-        <span className="text-xl">Food is just a click away!</span>
+        <span className="text-xl">Food is just a click away! Login/SignUp for our services</span>
         <SearchBar placeHolder={"Search by City or Town. Ex: London, Manchester"} onSubmit={handleSearchSubmit}/>
         </div>
         <div className="grid md:grid-cols-2 gap-5">
